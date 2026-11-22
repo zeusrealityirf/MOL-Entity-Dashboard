@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  base: '/MOL-Entity-Dashboard2/'
+  base: '/MOL-Entity-Dashboard1/'
 })
 
 
