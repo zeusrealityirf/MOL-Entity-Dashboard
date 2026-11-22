@@ -465,9 +465,9 @@ export default function App() {
               <span className="h-2.5 w-2.5 rounded-full bg-[#ad2831] animate-pulse" />
               <h1 className="text-2xl font-black tracking-wider text-white uppercase">Entity Statistical Dashboard</h1>
             </div>
-            <p className="text-xs text-red-300 mt-1">Ministry Of Labour, Labour Adminstration Bureau</p>
+            <p className="text-xs text-red-300 mt-1">Ministry Of Labour - Bureau of Buisiness Administration</p>
             <p className="text-[9px] text-slate-400 mt-1.5 tracking-wide italic">
-              Credits: Senior Labour Officer, President1327
+              Credits:President1327, Zeus_Reality
             </p>
           </div>
 
