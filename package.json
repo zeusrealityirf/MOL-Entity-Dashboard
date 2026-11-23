@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://zeusrealityirf.github.io/MOL-Entity-Dashboard1/",
+  "homepage": "https://zeusrealityirf.github.io/MOL-Entity-Dashboard/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
