@@ -12,12 +12,8 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout repository
@@ -34,7 +30,10 @@ jobs:
       - name: Build dashboard
         run: npm run build
 
-      - name: Setup GitHub Pages
+      - name: Verify build files
+        run: test -f dist/index.html
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Upload website files
@@ -42,6 +41,15 @@ jobs:
         with:
           path: ./dist
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v4
