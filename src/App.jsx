@@ -474,7 +474,7 @@ export default function App() {
           <div className="flex justify-center items-center gap-5 my-2 sm:my-0">
             <img src={`${import.meta.env.BASE_URL}logo1.png`} alt="Logo 1" className="h-14 w-14 object-contain opacity-90" />
             <div className="h-8 w-[1.5px] bg-white/15 self-center" />
-            <img src={`${import.meta.env.BASE_URL}logo2.png`} alt="Logo 2" className="h-14 w-14 object-contain opacity-90" />
+            <img src={`${import.meta.env.BASE_URL}bba-logo.png`} alt="BBA logo" className="h-14 w-14 object-contain opacity-90" />
           </div>
 
           <div className="bg-[#2d080d]/40 backdrop-blur-md border border-red-900/40 px-4 py-2 rounded-xl flex items-center justify-between sm:justify-end gap-4 min-w-[220px] shadow-[0_0_15px_rgba(173,40,49,0.2)]">
