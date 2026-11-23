@@ -1,153 +1,102 @@
 # MOL Entity Dashboard
 
-**Ministry of Labour | Entity Activity & Statistical Monitoring**
+**Ministry of Labour | Entity Monitoring & Statistical Analysis**
 
 [![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-View_Website-8B0000?style=for-the-badge)](https://zeusrealityirf.github.io/MOL-Entity-Dashboard/)
 
+---
+
 ## Overview
 
-The **MOL Entity Dashboard** is a web-based statistical monitoring platform designed to provide an overview of licensed entity activity, event participation and operational performance within the Ministry of Labour (MOL).
+The **MOL Entity Dashboard** is a centralised monitoring and statistical analysis platform designed to provide comprehensive insights into the operational activity and performance of licensed entities under the Ministry of Labour (MOL).
 
-The dashboard consolidates information from Google Sheets into a centralised interface, allowing users to monitor activity levels, identify inactive entities and assess overall performance through interactive charts and statistics.
+The dashboard presents entity records, event statistics, activity classifications, and performance indicators through an organised and accessible interface.
 
-The application is built using React and Vite and is hosted through GitHub Pages.
+Its primary objective is to support transparency, oversight, and informed decision-making by providing a clear overview of entity operations and engagement.
 
-## Features
+## Key Features
 
-### Entity Monitoring
-- View registered and licensed entities.
-- Monitor entity ownership, classifications and activity.
-- Track the time elapsed since an entity's most recent event.
-- Identify active, inactive and declining entities.
-- Search entities by name or owner.
-- Filter entities by classification.
+### Entity Activity Monitoring
 
-### Event Statistics
-- Monitor total recorded events.
-- Track event activity over the previous seven days.
-- Visualise event distribution and historical trends.
-- Analyse event categories and participation.
-- Compare current and previous activity periods.
+The dashboard provides an overview of licensed entities and their current activity classifications.
 
-### Performance Analytics
-- View weekly entity activity.
-- Track event-hosting statistics.
-- Display weekly host and entity leaderboards.
-- Monitor participation and attendance records.
-- Identify inactivity through automatically calculated status indicators.
+- Active and inactive entity identification
+- Entity ownership and classification records
+- Activity monitoring based on recorded events
+- Identification of prolonged inactivity
+- Entity-specific performance statistics
 
-### Automatic Data Synchronisation
-The dashboard retrieves information from configured Google Sheets CSV endpoints.
+### Statistical Analytics
 
-Data is automatically refreshed approximately every **120 seconds**, allowing the displayed statistics to reflect updates to the underlying records.
+A range of statistical indicators provides insight into overall entity performance.
 
-## Technology Stack
+- Total recorded events
+- Weekly event activity
+- Event distribution and trends
+- Average participation statistics
+- Comparative performance indicators
 
-| Technology | Purpose |
+### Performance Tracking
+
+The dashboard allows activity patterns and operational performance to be assessed across licensed entities.
+
+- Weekly activity summaries
+- Entity participation monitoring
+- Event-hosting statistics
+- Inactivity indicators
+- Historical activity comparisons
+
+### Data Visualisation
+
+Interactive charts and organised statistical panels provide a clear representation of entity activity and engagement.
+
+The visual interface allows users to interpret operational data efficiently and identify trends across the Ministry's registered entities.
+
+## Activity Classifications
+
+Entities are categorised according to their recorded activity levels.
+
+| Classification | Description |
 |---|---|
-| React | User interface |
-| Vite | Development and production builds |
-| JavaScript | Application logic and calculations |
-| Tailwind CSS | Styling and responsive layout |
-| Recharts | Statistical charts and visualisations |
-| Google Sheets | External data source |
-| GitHub Actions | Automated deployment |
-| GitHub Pages | Website hosting |
+| Active | Entities demonstrating recent recorded activity |
+| Early Inactivity | Entities showing initial signs of reduced activity |
+| Severe Inactivity | Entities experiencing prolonged periods of inactivity |
+| Inactive | Entities classified as inactive under the dashboard's monitoring criteria |
 
-## Installation
+These classifications assist with identifying activity trends and areas that may require additional attention.
 
-To run the dashboard locally, ensure that Node.js and npm are installed.
+## Dashboard Objectives
 
-**1. Clone the repository**
+The MOL Entity Dashboard aims to:
 
-`git clone https://github.com/zeusrealityirf/MOL-Entity-Dashboard.git`
+1. Provide a centralised overview of licensed entity operations.
+2. Improve visibility of activity and engagement trends.
+3. Support statistical reporting and performance assessment.
+4. Facilitate the identification of inactive entities.
+5. Present operational information through a clear, structured interface.
 
-**2. Navigate to the project**
+## Live Dashboard
 
-`cd MOL-Entity-Dashboard`
+**Access the dashboard:**
 
-**3. Install dependencies**
-
-`npm install`
-
-**4. Start the development server**
-
-`npm run dev`
-
-Open the local URL displayed in your terminal, typically `http://localhost:5173/`.
-
-## Project Structure
-
-- `public/` — Logos, images and static assets.
-- `src/` — React application code and styling.
-- `src/App.jsx` — Main dashboard, data processing and visualisations.
-- `index.html` — Application HTML entry point.
-- `package.json` — Dependencies and project scripts.
-- `vite.config.js` — Vite configuration and base URL.
-- `.github/workflows/deploy.yml` — Automated GitHub Pages deployment.
-
-## Data Sources
-
-The dashboard retrieves entity registration and event logging records from external Google Sheets.
-
-The data processing system converts CSV records into structured information for display within the dashboard.
-
-Data source URLs are configured in `src/App.jsx` using:
-
-- `EVENTS_TAB_URL` — Event logging records.
-- `ENTITY_TAB_URL` — Licensed entity records.
-
-To use a different dataset, update these endpoints and ensure that the new data follows the expected column structure.
-
-**Note:** The dashboard depends on access to its configured Google Sheets. If those sources become unavailable or their structure changes, data loading and statistical calculations may be affected.
-
-## Deployment
-
-The dashboard is deployed using GitHub Actions and GitHub Pages.
-
-Changes committed to the `main` branch trigger the deployment workflow, which:
-
-1. Installs the required dependencies.
-2. Builds the React application.
-3. Generates the production files.
-4. Uploads the compiled website.
-5. Publishes the website through GitHub Pages.
-
-**Live website:** https://zeusrealityirf.github.io/MOL-Entity-Dashboard/
-
-## Customisation
-
-The dashboard can be customised by modifying the React components, styling and supporting assets.
-
-Possible modifications include:
-
-- Updating ministry and organisational branding.
-- Replacing logos and images.
-- Adjusting dashboard colours and layouts.
-- Adding new statistical metrics and charts.
-- Connecting alternative data sources.
-- Expanding entity monitoring functionality.
-
-When changing the repository name, ensure that the Vite `base` configuration matches the GitHub Pages repository path.
+https://zeusrealityirf.github.io/MOL-Entity-Dashboard/
 
 ## Credits & Acknowledgements
 
-**Current repository and adaptations:** [zeusrealityirf](https://github.com/zeusrealityirf)
+**Dashboard Repository:** [zeusrealityirf](https://github.com/zeusrealityirf)
 
-**Original project:** [President1327](https://github.com/president1327irf/MOL-Entity-Dashboard2)
+**Original Development:** [President1327](https://github.com/president1327irf/MOL-Entity-Dashboard2)
 
-Credit is retained for President1327, identified in the original project documentation as a Senior Labour Officer and former second-in-command of LAB.
+Acknowledgement is given to the original developer for the foundational dashboard implementation.
 
 ## Disclaimer
 
-This dashboard is a statistical monitoring and visualisation tool. The accuracy of its displayed information depends on the quality, completeness and availability of its source data.
+The information displayed within the dashboard is dependent on the accuracy, completeness, and availability of its underlying records.
 
-The project should not be treated as an independent, authoritative source of official records.
-
-## Licensing
-
-No software licence is specified in this README. Reuse and redistribution of the original project's code and assets remain subject to the permissions of their respective rights holders.
+Statistics and activity classifications are intended to support monitoring and analysis and should be interpreted in conjunction with relevant administrative records.
 
 ---
 
-**MOL Entity Dashboard — Entity Monitoring, Event Statistics & Performance Analytics.**
+**Ministry of Labour**
+
+*Entity Oversight • Statistical Monitoring • Operational Transparency*
