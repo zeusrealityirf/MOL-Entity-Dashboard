@@ -467,7 +467,7 @@ export default function App() {
             </div>
             <p className="text-xs text-red-300 mt-1">Ministry Of Labour - Bureau of Buisiness Administration</p>
             <p className="text-[9px] text-slate-400 mt-1.5 tracking-wide italic">
-              Credits:President1327, Zeus_Reality
+              Created by President1327 with edits and updates from Zeus_Reality
             </p>
           </div>
 
