@@ -1,23 +1,24 @@
-import js from "@eslint/js";
-import globals from "globals";
-import hooks from "eslint-plugin-react-hooks";
-import react from "eslint-plugin-react";
-export default [
-  { ignores: ["dist/**", "node_modules/**"] },
-  js.configs.recommended,
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
   {
-    files: ["**/*.{js,jsx}"],
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
+      globals: globals.browser,
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
-  {
-    files: ["**/*.jsx"],
-    plugins: { "react-hooks": hooks, react },
-    rules: {
-      ...hooks.configs.recommended.rules,
-      "react/jsx-uses-vars": "error",
-    },
-  },
-];
+])
+
+
+// plugins also
